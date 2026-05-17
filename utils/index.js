@@ -1,5 +1,6 @@
 const { NAV_TABS, BASE_URL } = require('./constants');
 const { HomePage } = require('./HomePage');
+const { ContactUsPage } = require('./ContactUsPage');
 const { SignupLoginPage, USER_DEFAULTS, createUser } = require('./SignupLoginPage');
 
 const LoginPage = SignupLoginPage;
@@ -8,6 +9,7 @@ const Utils = {
   NAV_TABS,
   BASE_URL,
   HomePage,
+  ContactUsPage,
   SignupLoginPage,
   LoginPage,
   USER_DEFAULTS,
@@ -18,6 +20,7 @@ module.exports = {
   NAV_TABS,
   BASE_URL,
   HomePage,
+  ContactUsPage,
   SignupLoginPage,
   LoginPage,
   USER_DEFAULTS,

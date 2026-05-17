@@ -145,6 +145,8 @@ class SignupLoginPage {
 
   async logout() {
     await this.page.getByText(' Logout').click();
+    await expect(this.accountForm).toBeVisible();
+    await expect(this.signupForm).toBeVisible();
   }
 
   /**
@@ -171,6 +173,16 @@ class SignupLoginPage {
     .pressSequentially(password, { delay: 5 });
 
     await this.accountForm.getByRole('button', {name: 'Login'}).click();
+  }
+
+  // 8. Verify error 'Your email or password is incorrect!' is visible
+  async verifyErrorLoginFailed() {
+    await expect(this.page.getByText("Your email or password is incorrect!")).toBeVisible();
+  }
+
+  // 8. Verify error 'Your email or password is incorrect!' is visible
+  async verifyEmailExist() {
+    await expect(this.page.getByText("Email Address already exist!")).toBeVisible();
   }
 }
 
