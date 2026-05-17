@@ -1,7 +1,7 @@
 import { test, expect } from '@playwright/test';
 import { HomePage } from '../utils/index.js';
 
-test('Test Case 6: Contact Us Form', async ({ page }) => {
+test('Test Case 7: Verify Test Cases Page', async ({ page }) => {
   const homePage = new HomePage(page);
   // 1. Launch browser, 2. Navigate to url
   await homePage.open();
